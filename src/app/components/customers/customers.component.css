@@ -1,0 +1,9 @@
+.list-group-item{
+  margin-bottom: 10px;
+}
+form{
+  padding: 15px;
+}
+li div{
+  padding-left: 0!important;
+}

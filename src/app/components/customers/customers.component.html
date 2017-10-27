@@ -1,0 +1,57 @@
+<div class="header-info">
+<h2 class="display-3">Customers</h2>
+<!-- <p><a class="btn btn-info" role="button" (click)='createInvoice()'>Create</a></p> -->
+<!-- Button trigger modal -->
+<p><a class="btn btn-warning" role="button" data-toggle="modal" data-target="#customerModal">Create</a></p>
+<!-- Modal -->
+<div class="modal fade" id="customerModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="false">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <form (submit)="createCustomer()">
+      <div class="form-group clearfix form-row">
+        <h2 class="display-3 col-lg-6">New Customer</h2>
+        <button type="button" class="close" id="close" aria-label="Close" data-dismiss="modal">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <hr class="my-4" />
+      <div class="form-group clearfix form-row">
+        <div class="col-lg-6">
+          <h4>Name:</h4>
+          <input type="text" class="form-control" [(ngModel)]="name" name="name">
+        </div>
+      </div>
+      <div class="form-group clearfix form-row">
+        <div class="col-lg-6">
+          <h4>Address:</h4>
+          <input type="text" class="form-control" [(ngModel)]="address" name="address">
+        </div>
+      </div>
+      <div class="form-group clearfix form-row">
+        <div class="col-lg-6">
+          <h4>Phone:</h4>
+          <input type="text" class="form-control" [(ngModel)]="phone" name="phone">
+        </div>
+      </div>
+      <input class="btn btn-success btn-block" type="submit" value="Add">
+    </form>
+  </div>
+</div>
+</div>
+</div>
+<hr class="my-4" />
+<div class="card">
+<div class="list-header row">
+  <h5 class="col-lg-4">Name</h5>
+  <h5 class="col-lg-4">Address</h5>
+  <h5 class="col-lg-3">Phone</h5>
+</div>
+<ul class="list-group">
+  <li class="list-group-item row" *ngFor="let customer of customers">
+    <div class="col-lg-4">{{customer.name}}</div>
+    <div class="col-lg-4">{{customer.address}}</div>
+    <div class="col-lg-3">{{customer.phone}}</div>
+    <button type="button" name="button" class="btn btn-info col-lg-1">Edit</button>
+  </li>
+</ul>
+</div>

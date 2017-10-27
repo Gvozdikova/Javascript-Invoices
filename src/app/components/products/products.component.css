@@ -1,0 +1,14 @@
+.list-group-item{
+  margin-bottom: 10px;
+}
+form{
+  padding: 15px;
+}
+.edit{
+  border-width: 0!important;
+  margin-right: 7px;
+  margin-left: 55px;
+}
+.delete{
+  border-width: 0!important;
+}
